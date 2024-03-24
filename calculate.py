@@ -18,6 +18,7 @@ print("1. Add")
 print("2. Subtract")
 print("3. Multiply")
 print("4. Divide")
+print("5. Exit")
 
 while True:
     choice = input("Enter your choice: ")
@@ -34,9 +35,12 @@ while True:
             print("Result:", multiply(num1, num2))
         elif choice == '4':
             print("Result:", divide(num1, num2))
+    elif choice == '5':
+        print("Exiting calculator. Good bye!")
+        break
     else:
         print("Invalid input")
     another_calculation = input("Do you want to perform another calculation? (yes/no): ")
-    if another_calculation != 'yes':
+    if another_calculation.lower() != 'yes':
         break
 
