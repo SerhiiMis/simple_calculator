@@ -1,17 +1,33 @@
 def add(x, y):
-    return x + y
+    try:
+        return float(x) + float(y)
+    except ValueError:
+        print("Invalid input. Please enter numbers only.")
+        return None # Indicate error for clarity
 
 def subtract(x, y):
-    return x - y
+    try:
+        return float(x) - float(y)
+    except ValueError:
+        print("Invalid input. Please enter numbers only.")
+        return None
 
 def multiply(x, y):
-    return x * y
+    try:    
+        return float(x) * float(y)
+    except ValueError:
+        print("Invalid input. Please enter numbers only.")
 
 def divide(x, y):
     if y == 0:
-        return "Error! Division by zero!"
+        print("Error! Division by zero!")
+        return None
     else:
-        return x / y
+        try:
+            return float(x) / float(y)
+        except ValueError:
+            print("Invalid input. Please enter numbers only.")
+            return None
 
 print("Select operation:")
 print("1. Add")
